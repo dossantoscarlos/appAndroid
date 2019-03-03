@@ -1,16 +1,15 @@
 package com.example.fulllab.adapter
 
 import android.content.Context
+import android.graphics.Paint
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import com.example.fulllab.model.Produto
-
 import com.example.fulllab.R
-import android.graphics.Paint
+import com.example.fulllab.model.Produto
 import kotlinx.android.synthetic.main.item_layout.view.*
 
 
@@ -32,6 +31,7 @@ class RecycleViewAdapterItem(private val context: Context, private val produtoLi
         viewHolderCustom.precoAnterior.text ="R$ "+produtoList[i].precoAnterior.toString()
         viewHolderCustom.porcentagem.text = (produtoList[i].porcentagem).toInt().toString()+"%"
         viewHolderCustom.titulo.text = produtoList[i].titulo
+        viewHolderCustom.parcela.text = produtoList[i].parcela.toString()+" x R$ "+produtoList[i].valor.toString()
         viewHolderCustom.icone.setImageResource(produtoList[i].img)
     }
 
@@ -50,7 +50,7 @@ class RecycleViewAdapterItem(private val context: Context, private val produtoLi
         var titulo: TextView
         var porcentagem: TextView
         var icone: ImageView
-
+        var parcela: TextView
 
         //inicializando sos componentes
         init {
@@ -60,7 +60,7 @@ class RecycleViewAdapterItem(private val context: Context, private val produtoLi
             titulo = itemView.titulo_item
             porcentagem = itemView.porcentagem_item
             icone = itemView.img_item
-
+            parcela = itemView.parcela_item
             precoAnterior.setPaintFlags(precoAnterior.getPaintFlags() or Paint.STRIKE_THRU_TEXT_FLAG)
         }
     }

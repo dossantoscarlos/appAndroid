@@ -1,39 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
-    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:layout_width="170dp"
     android:layout_height="wrap_content"
     android:layout_marginTop="5dp"
     android:layout_marginBottom="5dp"
     android:background="@color/backgroundBranco">
 
-    <LinearLayout
-        android:padding="5dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
         <TextView
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/colorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/porcentagem_item" />
 
         <ImageView
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
             android:id="@+id/img_item"
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="300dp"
             android:scaleType="centerCrop"
+            android:contentDescription="@string/descricao_img_default"
             android:background="@color/backgroundBranco" />
 
         <TextView
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorPreta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
+            android:layout_marginBottom="5dp"
             android:textAlignment="center"
             android:id="@+id/titulo_item"/>
 
         <TextView
+            android:layout_marginBottom="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/cardview_shadow_start_color"
@@ -41,15 +45,18 @@
             android:id="@+id/preco_anterior_item"/>
 
         <TextView
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/colorAccent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:id="@+id/preco_atual_item"/>
 
         <TextView
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/colorPrimary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:id="@+id/parcela_item"/>
-    </LinearLayout>
 </LinearLayout>

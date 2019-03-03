@@ -1,26 +1,19 @@
 package com.example.fulllab
 
+import android.app.SearchManager
+import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.Toolbar
-import android.util.Log
 import android.view.Menu
-import com.example.fulllab.model.Produto
-import com.example.fulllab.adapter.RecycleViewAdapterItem
-import com.example.fulllab.util.RetrofitInitializer
-import kotlinx.android.synthetic.main.activity_main.*
-import retrofit2.Call
-import retrofit2.Response
-import javax.security.auth.callback.Callback
-import android.app.SearchManager
-import android.content.Context
 import android.widget.SearchView
+import com.example.fulllab.adapter.RecycleViewAdapterItem
+import com.example.fulllab.model.Produto
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-
-    private var listProduto: List<Produto>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,9 +25,16 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(actionbar)
 
-        listProduto = ArrayList()
+        val listaProduto: List<Produto>
 
-        val resposta = RetrofitInitializer().produtoService().busca(listProduto as ArrayList<Produto>)
+        listaProduto = ArrayList()
+        for(x in 1..8) {
+            listaProduto.add(Produto(10.0,20.0,"camisa esporte",
+                R.drawable.ic_launcher_background,2,5.0))
+        }
+        this.exibeLista(listaProduto)
+
+        /*val resposta = RetrofitInitializer().produtoService().busca(listProduto as ArrayList<Produto>)
 
         resposta.enqueue(object : Callback, retrofit2.Callback<Produto> {
 
@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         })
-
+*/
      }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -70,7 +70,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun exibeLista(produtos: List<Produto>) {
-
         val mAdapter = RecycleViewAdapterItem(this, produtos as ArrayList<Produto>)
         recycle_view_main_id.layoutManager = GridLayoutManager(this, 2)
         recycle_view_main_id.adapter = mAdapter

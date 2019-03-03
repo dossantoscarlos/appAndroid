@@ -1,11 +1,9 @@
 package com.example.fulllab.model
 
-import android.graphics.drawable.Drawable
 import com.example.fulllab.R
-import java.net.URI
 
 //classe que ira processar os dados vindo da api
-class Produto(precoAtual: Double, precoAnterior: Double, titulo: String,img : Int ){
+class Produto(precoAtual: Double, precoAnterior: Double,titulo: String,img : Int, parcela:Int, valor:Double ) {
 
     //titulo do produto
     var titulo: String = ""
@@ -25,6 +23,11 @@ class Produto(precoAtual: Double, precoAnterior: Double, titulo: String,img : In
     var porcentagem: Double = 0.toDouble()
         private set
 
+    var parcela: Int = 0
+        private set
+
+    var valor:Double = 0.toDouble()
+        private set
 
     init {
         this.titulo = titulo
@@ -32,6 +35,8 @@ class Produto(precoAtual: Double, precoAnterior: Double, titulo: String,img : In
         this.precoAnterior = precoAnterior
         this.porcentagem = this.porcentagem(precoAnterior, precoAtual)
         this.img = img
+        this.parcela = parcela
+        this.valor = valor
     }
 
     /*
