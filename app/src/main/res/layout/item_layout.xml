@@ -20,8 +20,8 @@
             android:layout_gravity="center"
             android:layout_marginBottom="5dp"
             android:id="@+id/img_item"
-            android:layout_width="wrap_content"
-            android:layout_height="300dp"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
             android:scaleType="centerCrop"
             android:contentDescription="@string/descricao_img_default"
             android:background="@color/backgroundBranco" />
