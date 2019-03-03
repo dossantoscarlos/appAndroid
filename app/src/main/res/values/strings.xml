@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Fulllab</string>
     <string name="busca">busca</string>
+    <string name="descricao_img_default">Imagem para exibir item</string>
 </resources>
