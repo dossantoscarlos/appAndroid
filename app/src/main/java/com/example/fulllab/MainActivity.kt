@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         listaProduto = ArrayList()
         for(x in 1..8) {
             listaProduto.add(Produto(10.0,20.0,"camisa esporte",
-                R.drawable.ic_launcher_background,2,5.0))
+                R.drawable.abc_ic_star_black_48dp,2,5.0))
         }
         this.exibeLista(listaProduto)
 

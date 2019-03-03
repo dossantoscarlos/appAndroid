@@ -9,22 +9,40 @@
     android:layout_marginBottom="5dp"
     android:background="@color/backgroundBranco">
 
+       <RelativeLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+
         <TextView
+            android:layout_alignParentStart="true"
             android:layout_marginBottom="5dp"
             android:textColor="@color/colorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/porcentagem_item" />
+            android:layout_alignLeft="@id/img_icone_favorito"
+            android:id="@+id/porcentagem_item"
+            android:layout_alignParentLeft="true"
+            android:layout_alignStart="@id/img_icone_favorito" />
+
+            <ImageView
+                android:id="@+id/img_icone_favorito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/icone_favorito"
+                android:src="@android:drawable/ic_input_add"
+                />
+        </RelativeLayout>
 
         <ImageView
+            android:src="@android:drawable/ic_input_add"
             android:layout_gravity="center"
             android:layout_marginBottom="5dp"
             android:id="@+id/img_item"
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="250dp"
-            android:scaleType="centerCrop"
-            android:contentDescription="@string/descricao_img_default"
-            android:background="@color/backgroundBranco" />
+            android:contentDescription="@string/descricao_img_default" />
 
         <TextView
             android:layout_marginTop="5dp"
