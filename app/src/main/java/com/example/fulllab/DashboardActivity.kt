@@ -18,6 +18,7 @@ import com.example.fulllab.model.Produto
 import kotlinx.android.synthetic.main.activity_dashboard.*
 import kotlinx.android.synthetic.main.app_bar_dashboard.*
 import kotlinx.android.synthetic.main.content_dashboard.*
+import kotlinx.android.synthetic.main.nav_header_dashboard.view.*
 
 class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -49,6 +50,11 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
+
+        val header = nav_view.getHeaderView(0)
+        header.textViewLogin.setOnClickListener{
+            startActivity(Intent(it.context,LoginActivity::class.java))
+        }
     }
 
 
