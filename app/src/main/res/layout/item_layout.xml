@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="5dp"
-    android:layout_width="170dp"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="5dp"
-    android:layout_marginBottom="5dp"
+    android:layout_marginRight="3dp"
+    android:layout_marginBottom="4dp"
     android:background="@color/backgroundBranco">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
        <RelativeLayout
            android:layout_width="wrap_content"
@@ -26,17 +27,16 @@
 
             <ImageView
                 android:id="@+id/img_icone_favorito"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:paddingEnd="10dp"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
                 android:contentDescription="@string/icone_favorito"
-                android:src="@android:drawable/ic_input_add"
-                />
+                android:paddingRight="10dp" />
         </RelativeLayout>
 
         <ImageView
-            android:src="@android:drawable/ic_input_add"
             android:layout_gravity="center"
             android:layout_marginBottom="5dp"
             android:id="@+id/img_item"
@@ -58,7 +58,7 @@
             android:layout_marginBottom="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/cardview_shadow_start_color"
+            android:textColor="@color/backgroundCinza"
             android:textAlignment="center"
             android:id="@+id/preco_anterior_item"/>
 
@@ -77,4 +77,5 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:id="@+id/parcela_item"/>
+    </LinearLayout>
 </LinearLayout>

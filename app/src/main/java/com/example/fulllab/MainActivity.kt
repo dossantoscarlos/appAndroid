@@ -5,11 +5,9 @@ import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.widget.SearchView
-import com.example.fulllab.adapter.RecycleViewAdapterItem
 import com.example.fulllab.model.Produto
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -32,7 +30,6 @@ class MainActivity : AppCompatActivity() {
             listaProduto.add(Produto(10.0,20.0,"camisa esporte",
                 R.drawable.abc_ic_star_black_48dp,2,5.0))
         }
-        this.exibeLista(listaProduto)
 
         /*val resposta = RetrofitInitializer().produtoService().busca(listProduto as ArrayList<Produto>)
 
@@ -69,9 +66,5 @@ class MainActivity : AppCompatActivity() {
         return super.onCreateOptionsMenu(menu)
     }
 
-    private fun exibeLista(produtos: List<Produto>) {
-        val mAdapter = RecycleViewAdapterItem(this, produtos as ArrayList<Produto>)
-        recycle_view_main_id.layoutManager = GridLayoutManager(this, 2)
-        recycle_view_main_id.adapter = mAdapter
-    }
+
 }

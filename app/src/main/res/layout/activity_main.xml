@@ -12,12 +12,5 @@
         android:id="@+id/minha_action_bar"
         layout="@layout/action_bar" />
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycle_view_main_id"
-        android:background="@color/cardview_shadow_start_color"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </android.support.v7.widget.RecyclerView>
 
 </LinearLayout>

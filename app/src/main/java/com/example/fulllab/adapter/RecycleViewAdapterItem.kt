@@ -33,6 +33,8 @@ class RecycleViewAdapterItem(private val context: Context, private val produtoLi
         viewHolderCustom.titulo.text = produtoList[i].titulo
         viewHolderCustom.parcela.text = produtoList[i].parcela.toString()+" x R$ "+produtoList[i].valor.toString()
         viewHolderCustom.icone.setImageResource(produtoList[i].img)
+
+        viewHolderCustom.favorito.setImageResource(R.mipmap.th)
     }
 
 
@@ -51,15 +53,16 @@ class RecycleViewAdapterItem(private val context: Context, private val produtoLi
         var porcentagem: TextView
         var icone: ImageView
         var parcela: TextView
+        var favorito: ImageView
 
         //inicializando sos componentes
         init {
-
             precoAtual = itemView.preco_atual_item
             precoAnterior = itemView.preco_anterior_item
             titulo = itemView.titulo_item
             porcentagem = itemView.porcentagem_item
             icone = itemView.img_item
+            favorito = itemView.img_icone_favorito
             parcela = itemView.parcela_item
             precoAnterior.setPaintFlags(precoAnterior.getPaintFlags() or Paint.STRIKE_THRU_TEXT_FLAG)
         }
