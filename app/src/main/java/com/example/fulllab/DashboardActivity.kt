@@ -43,7 +43,6 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
                     .setAction("Action", null).show()
         }
 
-
         val toggle = ActionBarDrawerToggle(
                 this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
         drawer_layout.addDrawerListener(toggle)
@@ -91,31 +90,11 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
         // Handle navigation view item clicks here.
         when (item.itemId) {
 
-            R.id.nav_camera -> {
-                startActivity(Intent(this,LoginActivity::class.java))
-            }
-
-            R.id.nav_gallery -> {
-
-            }
-            R.id.nav_slideshow -> {
-
-            }
-            R.id.nav_manage -> {
-
-            }
-            R.id.textViewLogin -> {
-
-            }
-            R.id.nav_share -> {
-
-            }
-            R.id.nav_send -> {
-
-            }
+            R.id.nav_contado -> startActivity(Intent(this, ContadoActivity::class.java))
         }
 
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
     }
+
 }
