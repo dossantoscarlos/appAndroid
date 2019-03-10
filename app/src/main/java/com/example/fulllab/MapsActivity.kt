@@ -37,6 +37,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         // Add a marker in Sydney and move the camera
         val fulllab = LatLng(-22.999415, -43.348769)
         mMap.addMarker(MarkerOptions().position(fulllab).title("Fulllab"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(fulllab))
+        val cameraUpdate = CameraUpdateFactory.newLatLngZoom(fulllab, Float.MAX_VALUE)
+        mMap.moveCamera(cameraUpdate)
+        mMap.animateCamera(cameraUpdate)
     }
 }
